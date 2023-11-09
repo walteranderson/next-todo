@@ -17,7 +17,7 @@ export default async function Home() {
       <h1 className="text-5xl font-bold my-6">Next Todos</h1>
 
       {todos && todos.length > 0
-        ? todos.map((todo) => <TodoItem todo={todo} />)
+        ? todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
         : <p className="text-gray-400">No todos yet.</p>}
 
       <TodoForm onSubmit={create} />
